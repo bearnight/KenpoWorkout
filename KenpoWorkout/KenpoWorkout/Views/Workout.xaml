@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="KenpoWorkout.Views.Workout"
+                    Title="{Binding Title}">
+  <!--Pages can be added as references or inline-->
+
+    <StackLayout Orientation="Vertical">
+        <StackLayout Orientation="Horizontal">
+
+            <Button x:Name="btnFrom"
+                    BackgroundColor="LightGray"
+                    BorderColor="Black"
+                    Font="Impact"
+                    FontSize="12"
+                    HeightRequest="65"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="From"
+                    WidthRequest="100"
+                    Clicked="BtnFrom_OnClicked"/>
+            <Button x:Name="btnUpTo"
+                    BackgroundColor="LightGray"
+                    BorderColor="Black"
+                    Font="Impact"
+                    FontSize="12"
+                    HeightRequest="65"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Up To"
+                    WidthRequest="100" 
+                    Clicked="BtnUpTo_OnClicked"/>
+        </StackLayout>
+ 
+ 
+
+        <Slider Maximum="2" ValueChanged="OnSliderValueChanged" x:Name="Sliders" BackgroundColor="Yellow"  />
+        <Label x:Name="rotatingLabel"
+               Text="Belt Level:Yellow"
+               FontSize="Large"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand"/>
+        <Label x:Name="BeltDesc"
+               Text="Yellow"
+               FontSize="Medium"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand"
+               IsVisible="False"></Label>
+       
+
+
+        <Button x:Name="btnStart"
+                BackgroundColor="LightGray"
+                BorderColor="Black"
+                Font="Impact"
+                FontSize="12"
+                HeightRequest="65"
+                HorizontalOptions="FillAndExpand"
+                Text="Start"
+                WidthRequest="100" 
+                Clicked="BtnStart_OnClicked"/>
+        <Button x:Name="btnStop"
+                BackgroundColor="LightGray"
+                BorderColor="Black"
+                Font="Impact"
+                FontSize="12"
+                HeightRequest="65"
+                HorizontalOptions="FillAndExpand"
+                Text="Stop"
+                WidthRequest="100"
+                IsVisible="False"
+                Clicked="BtnStop_OnClicked"></Button>
+    </StackLayout>
+</ContentPage>
